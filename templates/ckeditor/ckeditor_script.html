@@ -1,0 +1,17 @@
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+<script type="text/javascript">
+<!--
+    window.Django_CKEditor_Configs.push({
+        re: /{{ regex }}/,
+        config: {{ config|safe }}
+    });
+    CKEDITOR.config.language = '{{ LANGUAGE_CODE }}'
+    CKEDITOR.config.extraPlugins = 'mediaembed';
+    CKEDITOR.config.forcePasteAsPlainText = true;
+
+    {% if filebrowser %}
+        CKEDITOR.config.filebrowserBrowseUrl = '{{ filebrowser }}';
+    {% endif %}
+-->
+</script>
